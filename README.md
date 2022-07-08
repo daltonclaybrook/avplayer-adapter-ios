@@ -111,17 +111,17 @@ import YouboraAVPlayerAdapter
 
 ...
 
-//Once you have your player and plugin initialized you can set the adapter
+// Once you have your player and plugin initialized you can set the adapter
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdapter(player: player))
 
 ...
 
-//If you want to setup the ads adapter
+// If you want to setup the ads adapter
 self.plugin.adsAdapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerAdsAdapter(player: player))
 
 ...
 
-//When the ad finishes 
+// When the ad finishes 
 self.plugin.removeAdsAdapter()
 
 ...
@@ -139,23 +139,23 @@ self.plugin.removeAdsAdapter()
 
 ...
 
-//Once you have your player and plugin initialized you can set the adapter
+// Once you have your player and plugin initialized you can set the adapter
 [self.plugin setAdapter:[[YBAVPlayerAdapter alloc] initWithPlayer:player]];
 
 ...
 
-//If you want to setup the ads adapter
+// If you want to setup the ads adapter
 [self.plugin setAdsAdapter:[[YBAVPlayerAdsAdapter alloc] initWithPlayer:player]];
 
 ...
 
-//When the ad finishes 
+// When the ad finishes 
 [self.plugin removeAdsAdapter];
 ...
 
 // When the view gonna be destroyed you can force stop and clean the adapters in order to make sure you avoid retain cycles  
 [self.plugin fireStop];
-[self.pluginÂ removeAdapter];
+[self.pluginÿremoveAdapter];
 [self.plugin removeAdsAdapter];
 ```
 
@@ -174,7 +174,7 @@ import YouboraAVPlayerAdapter
 
 ...
 
-//Once you have your player, plugin and dnaClient initialized you can set the adapter
+// Once you have your player, plugin and dnaClient initialized you can set the adapter
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerStreamrootAdapter(dnaClient: dnaClient, andPlayer: player))
 
 ...
@@ -191,14 +191,14 @@ self.plugin.removeAdapter()
 
 ...
 
-//Once you have your player, dnaClient and plugin initialized you can set the adapter
+// Once you have your player, dnaClient and plugin initialized you can set the adapter
 [self.plugin setAdapter:[[YBAVPlayerStreamrootAdapter alloc] initWithDnaClient:dnaClient andPlayer:player]];
 
 ...
 
 // When the view gonna be destroyed you can force stop and clean the adapters in order to make sure you avoid retain cycles  
 [self.plugin fireStop];
-[self.pluginÂ removeAdapter];
+[self.pluginÿremoveAdapter];
 ```
 
 ### YBAVPlayerPolynetAdapter
@@ -216,7 +216,7 @@ import YouboraAVPlayerAdapter
 
 ...
 
-//Once you have your player, plugin and polynet initialized you can set the adapter
+// Once you have your player, plugin and polynet initialized you can set the adapter
 self.plugin.adapter = YBAVPlayerAdapterSwiftTranformer.transform(from: YBAVPlayerPolynetAdapter(polyNet: polynet, player: player, andDelegate: polynetDelegate))
 
 ...
@@ -233,14 +233,14 @@ self.plugin.removeAdapter()
 
 ...
 
-//Once you have your player, polynet and plugin initialized you can set the adapter
+// Once you have your player, polynet and plugin initialized you can set the adapter
 [self.plugin setAdapter:[[YBAVPlayerPolynetAdapter alloc] initWithPolyNet:polynet player:player andDelegate:polynetDelegate]];
 
 ...
 
 // When the view gonna be destroyed you can force stop and clean the adapters in order to make sure you avoid retain cycles  
 [self.plugin fireStop];
-[self.pluginÂ removeAdapter];
+[self.pluginÿremoveAdapter];
 ```
 
 By the examples code you can see that the adapter allows to pass the polynet delegate by reference. This is because polynet allows just one delegate. So if you want to use this delegate you need to send it by our adapter
